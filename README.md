@@ -326,7 +326,7 @@ Want to add something new? Here's how:
 
    ```yaml
    ---
-   layout: simple
+   layout: default
    title: Alert
    short-title: Alert
    status: Produktionsklar
