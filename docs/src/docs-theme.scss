@@ -119,3 +119,8 @@ body::after {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
+// Add more padding to the right of the logo
+header .page-header__logo--small {
+    margin: 0 .5rem 0 0;
+}
