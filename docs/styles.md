@@ -5,8 +5,6 @@ short-title: Visuellt
 status: Produktionsklar
 ---
 
-# Visuellt
-
 Här hittar du information om FauxKUIs visuella identitet.
 
 ## Färger

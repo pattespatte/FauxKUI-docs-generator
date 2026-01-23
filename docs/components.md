@@ -5,8 +5,6 @@ short-title: Komponenter
 status: Produktionsklar
 ---
 
-# Komponenter
-
 Här hittar du alla tillgängliga komponenter i FauxKUI.
 
 ## Tillgängliga komponenter

@@ -3,8 +3,6 @@ layout: default
 title: FauxKUI Design System
 ---
 
-# Welcome to FauxKUI Design System
-
 FauxKUI is a lightweight design system proof of concept demonstrating the `@forsakringskassan/docs-generator` package.
 
 ## Getting Started

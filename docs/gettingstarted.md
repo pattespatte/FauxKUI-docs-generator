@@ -5,8 +5,6 @@ short-title: Kom igång
 status: Produktionsklar
 ---
 
-# Kom igång
-
 Välkommen till FauxKUI! Här hittar du allt du behöver för att komma igång med designsystemet.
 
 ## Installation

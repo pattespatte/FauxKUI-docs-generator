@@ -5,8 +5,6 @@ short-title: Guider
 status: Produktionsklar
 ---
 
-# Guider
-
 Här finner du guider för att komma igång med FauxKUI.
 
 ## Tillgängliga guider
