@@ -216,7 +216,7 @@ After the front matter, you write regular Markdown:
 - ` ```html ` for code examples
 - Tables for API documentation
 
-#### The HTML Template (`simple.template.html`)
+#### The HTML Template (`default.template.html`)
 
 This is the skeleton for every documentation page. It uses **Nunjucks** templating:
 
@@ -232,6 +232,7 @@ This is the skeleton for every documentation page. It uses **Nunjucks** templati
 ```
 FauxKUI/
 ├── generate-docs.ts        # The main script that builds the docs
+├── server.js               # Development server for previewing docs
 ├── package.json            # Project info and dependencies
 ├── tsconfig.json           # TypeScript configuration
 │
@@ -246,19 +247,47 @@ FauxKUI/
 │
 ├── docs/                   # Documentation files
 │   ├── src/
-│   │   ├── setup.ts        # Vue 3 setup for live examples
-│   │   └── style.scss      # Global styles
+│   │   ├── docs-theme.scss # Custom CSS overrides
+│   │   ├── fkui-theme.scss # FKUI theme for code previews
+│   │   ├── style.scss      # Main SCSS entry point
+│   │   └── setup.ts        # Vue 3 setup for live examples
+│   ├── gettingstarted.md   # Getting started page
+│   ├── components.md       # Components overview
+│   ├── guides.md           # Guides page
+│   ├── functions.md        # Functions page
+│   ├── styles.md           # Visual styles page
 │   └── build/              # Generated website (DON'T edit manually!)
-│       ├── button/index.html
-│       └── card/index.html
+│       ├── index.html
+│       ├── gettingstarted.html
+│       └── src/components/
+│           ├── button/index.html
+│           └── card/index.html
 │
 └── templates/              # HTML templates for pages
-    └── simple.template.html
+    ├── default.template.html
+    └── pattern.template.html
 ```
 
 ---
 
-## Part 5: How to Use This Project
+## Part 5: Main Documentation Pages
+
+The documentation site includes several main pages in the `docs/` folder:
+
+| Page | File | Description |
+|------|------|-------------|
+| Home | `index.md` | Landing page with overview |
+| Getting Started | `gettingstarted.md` | Installation and quick start |
+| Components | `components.md` | Overview of all components |
+| Guides | `guides.md` | How-to guides |
+| Functions | `functions.md` | Utility functions reference |
+| Styles | `styles.md` | Visual design guidelines |
+
+Each page uses front matter for metadata (title, layout, status) and contains regular Markdown content.
+
+---
+
+## Part 6: How to Use This Project
 
 ### Building the Documentation
 
@@ -287,7 +316,7 @@ This:
 
 ---
 
-## Part 6: Adding a New Component
+## Part 7: Adding a New Component
 
 Want to add something new? Here's how:
 
@@ -302,16 +331,16 @@ Want to add something new? Here's how:
    short-title: Alert
    status: Produktionsklar
    ---
-   
-   # Alert
-   
+
    The alert component displays important messages...
-   
+
    ```html
    <div class="fk-alert">Hello!</div>
    ```
 
    ```
+
+   > **Note**: Don't add an H1 heading (`# Alert`) in your markdown content. The page title is already rendered by the template from the `title` field in front matter.
 
 3. **Create `alert.scss`** with styles:
 
@@ -329,7 +358,7 @@ Want to add something new? Here's how:
 
 ---
 
-## Part 7: Key Concepts Summary
+## Part 8: Key Concepts Summary
 
 ### Markdown (.md files)
 
