@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:build": "tsx generate-docs.ts",
-    "docs:serve": "npm run docs:build && node server.js",
-    "serve": "node server.js"
+    "docs:serve": "npm run docs:build && node server.js"
   },
   "keywords": [
     "design-system",
