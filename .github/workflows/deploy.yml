@@ -36,6 +36,25 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Create root index redirect
+        run: |
+          cat > docs/build/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <title>FauxKUI Design System</title>
+            <meta http-equiv="refresh" content="0; url=./docs/">
+            <script>
+              window.location.href = './docs/';
+            </script>
+          </head>
+          <body>
+            <p>Redirecting to <a href="./docs/">documentation</a>...</p>
+          </body>
+          </html>
+          EOF
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
