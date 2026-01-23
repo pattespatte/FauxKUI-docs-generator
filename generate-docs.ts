@@ -45,7 +45,13 @@ const sources = defineSources([
     {
         // Include the home page
         include: ["docs/index.md"],
-        basePath: "./",
+        basePath: "docs",
+        fileReader: frontMatterFileReader,
+    },
+    {
+        // Include all markdown files in docs folder (gettingstarted, components, etc.)
+        include: ["docs/*.md"],
+        basePath: "docs",
         fileReader: frontMatterFileReader,
     },
     {

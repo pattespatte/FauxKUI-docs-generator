@@ -2,7 +2,6 @@ import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = 8080;
@@ -19,9 +18,30 @@ app.get(/\.json$/, (req, res) => {
     res.sendFile(path.join(BUILD_DIR, req.path));
 });
 
-// Handle all routes - serve docs/index.html as the main page
+// Serve HTML files for specific routes
+app.get(/^\/gettingstarted\/?$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, "gettingstarted.html"));
+});
+
+app.get(/^\/components\/?$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, "components.html"));
+});
+
+app.get(/^\/guides\/?$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, "guides.html"));
+});
+
+app.get(/^\/functions\/?$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, "functions.html"));
+});
+
+app.get(/^\/styles\/?$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, "styles.html"));
+});
+
+// Default route - serve index.html (home page)
 app.use((req, res) => {
-    res.sendFile(path.join(BUILD_DIR, "docs", "index.html"));
+    res.sendFile(path.join(BUILD_DIR, "index.html"));
 });
 
 const server = createServer(app);
