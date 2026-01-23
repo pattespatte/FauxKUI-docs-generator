@@ -13,6 +13,11 @@ const app = express();
 app.use("/assets", express.static(path.join(BUILD_DIR, "assets")));
 app.use("/src", express.static(path.join(BUILD_DIR, "src")));
 
+// Serve HTML files
+app.get(/\.html$/, (req, res) => {
+    res.sendFile(path.join(BUILD_DIR, req.path));
+});
+
 // Serve JSON files
 app.get(/\.json$/, (req, res) => {
     res.sendFile(path.join(BUILD_DIR, req.path));

@@ -21,8 +21,6 @@ const docs = new Generator(import.meta.url, {
         searchProcessor(),
         topnavProcessor("docs/topmenu.json", "FauxKUI Design System"),
         cookieProcessor(),
-        versionProcessor(pkg, "footer:right"),
-        selectableVersionProcessor(pkg, "footer:right"),
     ],
 });
 
