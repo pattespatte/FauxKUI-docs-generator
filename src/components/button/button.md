@@ -5,8 +5,6 @@ short-title: Button
 status: Produktionsklar
 ---
 
-# Button
-
 The button component is used to trigger actions or navigate to other pages. It supports multiple variants, sizes, and states.
 
 ## Basic Usage

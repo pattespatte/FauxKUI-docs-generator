@@ -1,5 +1,196 @@
 // Simpler theme that doesn't require FKUI packages
 // This provides basic theming for code previews and live examples
+//
+// Component styles are inlined here because the docs-generator uses
+// compileStringAsync which doesn't support relative imports properly.
+
+// Button component styles
+.fk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-family: inherit;
+    white-space: nowrap;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    // Primary variant
+    &--primary {
+        background-color: #0056b3;
+        color: white;
+
+        &:hover:not(:disabled) {
+            background-color: #004494;
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+    }
+
+    // Secondary variant
+    &--secondary {
+        background-color: white;
+        color: #0056b3;
+        border-color: #0056b3;
+
+        &:hover:not(:disabled) {
+            background-color: #f0f7ff;
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+    }
+
+    // Destructive variant
+    &--destructive {
+        background-color: #dc3545;
+        color: white;
+
+        &:hover:not(:disabled) {
+            background-color: #b02a37;
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+    }
+
+    // Sizes
+    &--sm {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
+    }
+
+    &--lg {
+        padding: 0.875rem 1.75rem;
+        font-size: 1.0625rem;
+    }
+}
+
+// Card component styles
+.fk-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #d0d6d6;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    // Card sections
+    &__header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e0e4e4;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    &__subtitle {
+        margin: 0.25rem 0 0;
+        font-size: 0.875rem;
+        color: #6b7280;
+    }
+
+    &__body {
+        padding: 1.5rem;
+        flex: 1;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__footer {
+        padding: 1rem 1.5rem;
+        background-color: #f9fafb;
+        border-top: 1px solid #e0e4e4;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    // Modifiers
+    &--elevated {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    &--flat {
+        border: none;
+        box-shadow: none;
+    }
+
+    &--clickable {
+        cursor: pointer;
+        transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    // Size variants
+    &--sm &__header,
+    &--sm &__body,
+    &--sm &__footer {
+        padding: 0.75rem 1rem;
+    }
+
+    &--lg &__header,
+    &--lg &__body,
+    &--lg &__footer {
+        padding: 2rem;
+    }
+
+    // Image positioning
+    &--image-top &__image {
+        order: -1;
+    }
+
+    &--image-bottom &__image {
+        order: 99;
+    }
+}
 
 .code-preview__preview,
 .live-example__example,

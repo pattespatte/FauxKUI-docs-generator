@@ -5,8 +5,6 @@ short-title: Card
 status: Produktionsklar
 ---
 
-# Card
-
 The card component is a container for grouping related content and actions. Cards can contain headers, body content, images, and footers with actions.
 
 ## Basic Card
