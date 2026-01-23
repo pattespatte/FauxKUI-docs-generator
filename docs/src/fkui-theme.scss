@@ -1,0 +1,9 @@
+// Simpler theme that doesn't require FKUI packages
+// This provides basic theming for code previews and live examples
+
+.code-preview__preview,
+.live-example__example,
+.user-theme {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light dark;
+}

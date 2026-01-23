@@ -1,0 +1,121 @@
+@use "@forsakringskassan/docs-generator/style";
+
+// Custom styles on top of the base docs-generator styles
+footer {
+    background: #2d6a4f;
+    color: white;
+    padding: 3rem;
+
+    @media (min-width: 992px) {
+        display: flex;
+        gap: 5rem;
+    }
+
+    h1,
+    .heading--h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0 0 1rem;
+        padding: 0;
+    }
+
+    li,
+    #version button {
+        margin-bottom: 0.5rem;
+    }
+
+    .anchor {
+        color: white;
+        font-weight: 400;
+        text-decoration-color: white;
+
+        &:hover {
+            color: #000;
+            text-decoration-color: #000;
+        }
+    }
+
+    .footer__left {
+        flex: 0 0 auto;
+    }
+
+    .footer__center {
+        flex: 1 1 auto;
+    }
+
+    .footer__right {
+        flex: 0 0 auto;
+    }
+
+    .version {
+        color: white;
+        margin-left: 0;
+    }
+
+    #version button {
+        appearance: none;
+        background: transparent;
+
+        &:hover,
+        &:active {
+            background: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.sandbox-link {
+    padding: 0 0.75rem;
+}
+
+#content a.button.docs-button {
+    color: #fff;
+}
+
+.mermaid p {
+    margin-bottom: 0;
+}
+
+.color-table__color {
+    display: inline-block;
+    background: var(--value);
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0.25rem;
+    vertical-align: text-bottom;
+    margin-right: 0.25rem;
+    border: 1px solid #ccc;
+}
+
+.color-table__term {
+    background: transparent;
+    white-space: nowrap;
+}
+
+.docs-pre {
+    display: inline-block;
+    white-space: pre;
+    font-family: monospace;
+    margin: 1em 0px;
+}
+
+// PoC Watermark - indicates this is not an official site
+body::after {
+    content: "This is just a PoC! Not an official site.";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}

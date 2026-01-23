@@ -1,0 +1,29 @@
+{
+  "name": "fauxkui",
+  "version": "1.0.0",
+  "description": "FauxKUI - A lightweight design system PoC demonstrating @forsakringskassan/docs-generator",
+  "type": "module",
+  "scripts": {
+    "docs:build": "tsx generate-docs.ts",
+    "docs:serve": "npm run docs:build && node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "design-system",
+    "components",
+    "documentation"
+  ],
+  "author": "FauxKUI",
+  "license": "MIT",
+  "devDependencies": {
+    "@forsakringskassan/docs-generator": "2.35.5",
+    "@types/node": "^20.19.30",
+    "esbuild": "0.27.2",
+    "express": "^5.2.1",
+    "sass": "1.97.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.27"
+  }
+}

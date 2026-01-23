@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+docs/build/
+temp/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+*.log
+
+# Claude Code
+.claude/
+
+# Playwright MCP
+.playwright-mcp/

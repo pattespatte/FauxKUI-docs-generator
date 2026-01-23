@@ -1,0 +1,113 @@
+/**
+ * FauxKUI Card Component
+ * A container component for grouping related content and actions.
+ */
+
+.fk-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #d0d6d6;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    // Card sections
+    &__header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e0e4e4;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    &__subtitle {
+        margin: 0.25rem 0 0;
+        font-size: 0.875rem;
+        color: #6b7280;
+    }
+
+    &__body {
+        padding: 1.5rem;
+        flex: 1;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__footer {
+        padding: 1rem 1.5rem;
+        background-color: #f9fafb;
+        border-top: 1px solid #e0e4e4;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    // Modifiers
+    &--elevated {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    &--flat {
+        border: none;
+        box-shadow: none;
+    }
+
+    &--clickable {
+        cursor: pointer;
+        transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    // Size variants
+    &--sm &__header,
+    &--sm &__body,
+    &--sm &__footer {
+        padding: 0.75rem 1rem;
+    }
+
+    &--lg &__header,
+    &--lg &__body,
+    &--lg &__footer {
+        padding: 2rem;
+    }
+
+    // Image positioning
+    &--image-top &__image {
+        order: -1;
+    }
+
+    &--image-bottom &__image {
+        order: 99;
+    }
+}
