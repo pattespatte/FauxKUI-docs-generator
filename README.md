@@ -1,4 +1,4 @@
-# FauxKUI: A Design System Explained for Beginners
+# FauxKUI: A Design System with a Documentation Generator
 
 ## What is FauxKUI?
 
@@ -203,7 +203,7 @@ The **front matter** at the top (between `---`) is special metadata:
 
 ```yaml
 ---
-layout: simple      # Which HTML template to use
+layout: default     # Which HTML template to use
 title: Button       # Page title
 short-title: Button # Short title for navigation
 status: Produktionsklar  # Component status badge
@@ -409,4 +409,4 @@ Automatically refreshing the browser when you save a file - super handy for deve
 
 ---
 
-Made with <3 for the FauxKUI project
+Hope you'll find FauxKUI useful!
