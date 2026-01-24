@@ -2,7 +2,7 @@
 
 ## Vad är FauxKUI?
 
-**FauxKUI** (uttalas "fox-koo-eye") är ett **designsystem** &ndash; tänk på det som ett LEGO-set för att bygga webbplatser, men istället för plastbitar använder du färdiga delar som kallas **komponenter**.
+**FauxKUI** är ett **designsystem** &ndash; tänk på det som ett LEGO-set för att bygga webbplatser, men istället för plastbitar använder du färdiga delar som kallas **komponenter**.
 
 Det är inspirerat av **FKUI** (Försäkringskassans designsystem) &ndash; designsystemet som används av Försäkringskassan.
 

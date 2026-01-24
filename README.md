@@ -2,7 +2,7 @@
 
 ## What is FauxKUI?
 
-**FauxKUI** (pronounced "fox-koo-eye") is a **design system** - think of it like a LEGO set for building websites, but instead of plastic bricks, you use ready-made pieces called **components**.
+**FauxKUI** (pronounced "foh-kay-yoo-eye") is a **design system** - think of it like a LEGO set for building websites, but instead of plastic bricks, you use ready-made pieces called **components**.
 
 It's inspired by **FKUI** (Försäkringskassan's Design System) - the design system used by the Swedish social insurance agency.
 
