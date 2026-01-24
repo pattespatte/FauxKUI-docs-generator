@@ -2,9 +2,9 @@
 
 ## Vad är FauxKUI?
 
-**FauxKUI** (uttalas "fox-koo-eye") är ett **designsystem** - tänk på det som ett LEGO-set för att bygga webbplatser, men istället för plastbitar använder du färdiga delar som kallas **komponenter**.
+**FauxKUI** (uttalas "fox-koo-eye") är ett **designsystem** &ndash; tänk på det som ett LEGO-set för att bygga webbplatser, men istället för plastbitar använder du färdiga delar som kallas **komponenter**.
 
-Det är inspirerat av **FKUI** (Försäkringskassans designsystem) - designsystemet som används av Försäkringskassan.
+Det är inspirerat av **FKUI** (Försäkringskassans designsystem) &ndash; designsystemet som används av Försäkringskassan.
 
 ## Övergripande: Vad det här projektet gör
 
@@ -29,9 +29,9 @@ Det är inspirerat av **FKUI** (Försäkringskassans designsystem) - designsyste
 
 ---
 
-## Del 1: Förstå Designsystem
+## Del 1: Förstå designsystemets fördelar
 
-### Vad är ett Designsystem?
+### Vad är ett designsystem?
 
 Föreställ dig att du bygger ett hus. Du kunna:
 
@@ -65,16 +65,16 @@ Knappen används för att få saker att hända när användare klickar på dem.
 
 **Button-varianter** (olika utseenden):
 
-- **Primary**: Huvudaktionsknappen (blå) - "Spara", "Skicka"
-- **Secondary**: Mindre viktiga åtgärder (grå) - "Avbryt", "Gå tillbaka"
-- **Outline**: Genomskinlig med kant - "Läs mer"
-- **Danger**: För destruktiva åtgärder (röd) - "Ta bort", "Radera"
+- **Primary**: Huvudaktionsknappen (blå) &ndash; "Spara", "Skicka"
+- **Secondary**: Mindre viktiga åtgärder (grå) &ndash; "Avbryt", "Gå tillbaka"
+- **Outline**: Genomskinlig med kant &ndash; "Läs mer"
+- **Danger**: För destruktiva åtgärder (röd) &ndash; "Ta bort", "Radera"
 
 **Button-storlekar**:
 
-- Small (sm) - för trånga utrymmen
-- Default - normal storlek
-- Large (lg) - för betoning
+- Small (sm) &ndash; för trånga utrymmen
+- Default &ndash; normal storlek
+- Large (lg) &ndash; för betoning
 
 **Exempel**:
 
@@ -86,7 +86,7 @@ Knappen används för att få saker att hända när användare klickar på dem.
 
 ### 2. Card-komponent
 
-Ett kort är som en behållare - den grupperar relaterat innehåll tillsammans.
+Ett kort är som en behållare &ndash; den grupperar relaterat innehåll tillsammans.
 
 **Card-delar**:
 
@@ -119,13 +119,14 @@ Ett kort är som en behållare - den grupperar relaterat innehåll tillsammans.
 
 ---
 
-## Del 3: Förstå Dokumentgeneratorn
+## Del 3: Förstå dokumentgeneratorn
 
-### Vad är en Dokumentgenerator?
+### Vad är en dokumentgenerator?
 
 En **dokumentgenerator** är som en robot som läser dina filer och automatiskt skapar en fin webbplats som visar hur man använder dina komponenter.
 
 **Utan dokumentgenerator**: Du skriver manuellt HTML för varje exempelsida
+
 **Med dokumentgenerator**: Skriv en gång i Markdown, den genererar allt automatiskt!
 
 ### Hur @forsakringskassan/docs-generator fungerar
@@ -158,13 +159,13 @@ En **dokumentgenerator** är som en robot som läser dina filer och automatiskt 
 │  docs/build/                                                      │
 │  ├── button/index.html    ← Genererad dokumentationssida          │
 │  ├── card/index.html      ← Genererad dokumentationssida          │
-│  └── assets/               ← CSS- och JS-filer                    │
+│  └── assets/              ← CSS- och JS-filer                    │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
 ### De viktiga filerna förklarade
 
-#### `generate-docs.ts` - Huvudskriptet
+#### `generate-docs.ts` &ndash; Huvudskriptet
 
 ```typescript
 // Här börjar allt!
@@ -206,14 +207,14 @@ docs.build(sources);
 layout: default     # Vilken HTML-mall som ska användas
 title: Button       # Sidtitel
 short-title: Button # Kort titel för navigering
-status: Produktionsklar  # Komponentstatusbadge
+status: Produktionsklar  # Komponentens statusbadge
 ---
 ```
 
 Efter front matter skriver du vanlig Markdown:
 
 - `#` för rubriker
-- ` ```html ` för kodeexempel
+- `` ```html `` för kodexempel
 - Tabeller för API-dokumentation
 
 #### HTML-mallen (`default.template.html`)
@@ -222,7 +223,7 @@ Detta är skelettet för varje dokumentationssida. Den använder **Nunjucks**-te
 
 ```html
 <h1>{{ doc.attributes.title }}</h1>  <!-- Hämtar titeln från front matter -->
-{{ doc.body | marked }}               <!-- Konverterar Markdown till HTML -->
+{{ doc.body | marked }}              <!-- Konverterar Markdown till HTML -->
 ```
 
 ---
@@ -340,9 +341,9 @@ Vill du lägga till något nytt? Så här gör du:
 
    ```
 
-   > **Obs**: Lägg inte till en H1-rubrik (`# Alert`) i ditt Markdown-innehåll. Sidtiteln renderas redan av mallen från `title`-fältet i front matter.
+**Obs**: Lägg inte till en H1-rubrik (`# Alert`) i ditt Markdown-innehåll. Sidtiteln renderas redan av mallen från `title`-fältet i front matter.
 
-3. **Skapa `alert.scss`** med stilar:
+1. **Skapa `alert.scss`** med stilar:
 
    ```scss
    .fk-alert {
@@ -352,9 +353,9 @@ Vill du lägga till något nytt? Så här gör du:
    }
    ```
 
-4. **Bygg om**: `npm run docs:build`
+2. **Bygg om**: `npm run docs:build`
 
-5. **Klar!** Din nya komponentsida genereras automatiskt
+3. **Klar!** Din nya komponentsida genereras automatiskt
 
 ---
 
@@ -382,7 +383,7 @@ Att konvertera källfiler (Markdown, SCSS) till slutliga filer (HTML, CSS) som w
 
 ### Live reload
 
-Automatiskt uppdatera webbläsaren när du sparar en fil - superpraktiskt för utveckling!
+Automatiskt uppdatera webbläsaren när du sparar en fil &ndash; superpraktiskt för utveckling!
 
 ---
 
@@ -403,8 +404,8 @@ Automatiskt uppdatera webbläsaren när du sparar en fil - superpraktiskt för u
 
 ## Behöver du lära dig mer?
 
-- **Markdown**: Sök "Markdown tutorial" - det är superenkelt!
-- **SCSS**: Sök "SCSS guide" - det är som CSS men bättre
+- **Markdown**: Sök "Markdown tutorial" &ndash; det är superenkelt!
+- **SCSS**: Sök "SCSS guide" &ndash; det är som CSS men bättre
 - **Nunjucks**: Det templating-språk som används i HTML-mallar
 
 ---

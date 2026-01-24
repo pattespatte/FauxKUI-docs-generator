@@ -340,9 +340,9 @@ Want to add something new? Here's how:
 
    ```
 
-   > **Note**: Don't add an H1 heading (`# Alert`) in your markdown content. The page title is already rendered by the template from the `title` field in front matter.
+**Note**: Don't add an H1 heading (`# Alert`) in your markdown content. The page title is already rendered by the template from the `title` field in front matter.
 
-3. **Create `alert.scss`** with styles:
+1. **Create `alert.scss`** with styles:
 
    ```scss
    .fk-alert {
@@ -352,9 +352,9 @@ Want to add something new? Here's how:
    }
    ```
 
-4. **Rebuild**: `npm run docs:build`
+2. **Rebuild**: `npm run docs:build`
 
-5. **Done!** Your new component page is generated automatically
+3. **Done!** Your new component page is generated automatically
 
 ---
 
