@@ -1,5 +1,32 @@
 @use "@forsakringskassan/docs-generator/style";
 
+.page-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--fkds-color-text-inverted);
+    background-color: var(--fkds-color-header-background-primary);
+    padding: 1rem 0 1rem 1rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .page-header__right {
+    min-width: 0;
+    max-width: 1260px;
+    flex-wrap: wrap-reverse;
+}
+
+.page-header__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    padding-top: 0.4rem;
+    font-size: var(--f-font-size-standard);
+}
+
 // Custom styles on top of the base docs-generator styles
 footer {
     background: #2d6a4f;

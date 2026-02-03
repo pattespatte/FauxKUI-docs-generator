@@ -1109,7 +1109,8 @@ header .page-header__right {
   min-width: 0;
   max-width: 1260px;
   padding-top: 0;
-  flex-wrap: wrap-reverse;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 header .page-header__right-slot {
