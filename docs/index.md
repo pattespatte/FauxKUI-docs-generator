@@ -3,19 +3,19 @@ layout: default
 title: FauxKUI Design System
 ---
 
-FauxKUI is a lightweight design system proof of concept demonstrating the `@forsakringskassan/docs-generator` package.
+FauxKUI är ett lättviktigt designsystem som är en proof of concept och som visar paketet `@forsakringskassan/docs-generator`.
 
-## Getting Started
+## Kom igång
 
-Explore our component library to get started with building beautiful, accessible user interfaces.
+Utforska vårt komponentbibliotek för att komma igång med att bygga vackra, tillgängliga användargränssnitt.
 
-## Components
+## Komponenter
 
-- [Button](./src/components/button/) - Buttons for actions and navigation
-- [Card](./src/components/card/) - Cards for grouping related content
+- [Button](./src/components/button/) - Knappar för åtgärder och navigering
+- [Card](./src/components/card/) - Kort för att gruppera relaterat innehåll
 
-## Features
+## Funktioner
 
-- **Accessible**: All components follow WCAG 2.2 AA guidelines
-- **Lightweight**: Built with modern web technologies
-- **Customizable**: Easy to theme and extend
+- **Tillgänglig**: Alla komponenter följer WCAG 2.2 AA-riktlinjer
+- **Lättviktig**: Byggd med moderna webbteknologier
+- **Anpassningsbar**: Lätt att tematisera och utöka
