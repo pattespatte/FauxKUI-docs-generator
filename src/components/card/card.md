@@ -5,161 +5,161 @@ short-title: Card
 status: Produktionsklar
 ---
 
-The card component is a container for grouping related content and actions. Cards can contain headers, body content, images, and footers with actions.
+Kortkomponenten är en behållare för att gruppera relaterat innehåll och åtgärder. Kort kan innehålla sidhuvuden, brödtext, bilder och sidfötter med åtgärder.
 
-## Basic Card
+## Grundläggande kort
 
-A simple card with header, body, and footer sections.
+Ett enkelt kort med sidhuvud, brödtext och sidfotssektioner.
 
 ```html
 <div class="fk-card">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Card Title</h2>
-        <p class="fk-card__subtitle">Optional subtitle text</p>
+        <h2 class="fk-card__title">Kortrubrik</h2>
+        <p class="fk-card__subtitle">Valfri underrubriktext</p>
     </div>
     <div class="fk-card__body">
-        <p>This is the card body content. You can put any content here including text, lists, or other components.</p>
+        <p>Det här är kortets brödtext. Du kan lägga valfritt innehåll här inklusive text, listor eller andra komponenter.</p>
     </div>
     <div class="fk-card__footer">
-        <button class="fk-button fk-button--secondary">Cancel</button>
-        <button class="fk-button fk-button--primary">Save</button>
+        <button class="fk-button fk-button--secondary">Avbryt</button>
+        <button class="fk-button fk-button--primary">Spara</button>
     </div>
 </div>
 ```
 
-## Minimal Card
+## Minimalt kort
 
-A card with only the body content.
+Ett kort med endast brödtext.
 
 ```html
 <div class="fk-card">
     <div class="fk-card__body">
-        <h3>Simple Card</h3>
-        <p>This card has only a body section with no header or footer.</p>
+        <h3>Enkelt kort</h3>
+        <p>Det här kortet har endast en brödtextsektion utan sidhuvud eller sidfot.</p>
     </div>
 </div>
 ```
 
-## Card with Image
+## Kort med bild
 
-A card that includes an image at the top.
+Ett kort som inkluderar en bild högst upp.
 
 ```html
 <div class="fk-card fk-card--image-top">
-    <img class="fk-card__image" src="https://picsum.photos/600/300" alt="Card image">
+    <img class="fk-card__image" src="https://picsum.photos/600/300" alt="Kortbild">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Nature Card</h2>
+        <h2 class="fk-card__title">Naturkort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card includes an image at the top. Images are automatically responsive.</p>
+        <p>Det här kortet inkluderar en bild högst upp. Bilder är automatiskt responsiva.</p>
     </div>
     <div class="fk-card__footer">
-        <button class="fk-button fk-button--primary">View Details</button>
+        <button class="fk-button fk-button--primary">Visa detaljer</button>
     </div>
 </div>
 ```
 
-## Card Variants
+## Kortvarianter
 
-### Elevated Card
+### Förhöjt kort
 
-Use the elevated modifier for a more prominent card with deeper shadow.
+Använd den förhöjda modifieraren för ett mer framträdande kort med djupare skugga.
 
 ```html
 <div class="fk-card fk-card--elevated">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Elevated Card</h2>
+        <h2 class="fk-card__title">Förhöjt kort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has an elevated appearance with enhanced shadow.</p>
+        <p>Det här kortet har ett förhöjt utseende med förstärkt skugga.</p>
     </div>
 </div>
 ```
 
-### Flat Card
+### Platt kort
 
-Use the flat modifier for a card without border or shadow.
+Använd den platta modifieraren för ett kort utan kant eller skugga.
 
 ```html
 <div class="fk-card fk-card--flat">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Flat Card</h2>
+        <h2 class="fk-card__title">Platt kort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has no border or shadow for a minimal appearance.</p>
+        <p>Det här kortet har ingen kant eller skugga för ett minimalt utseende.</p>
     </div>
 </div>
 ```
 
-### Clickable Card
+### Klickbart kort
 
-Use the clickable modifier for cards that are interactive.
+Använd den klickbara modifieraren för kort som är interaktiva.
 
 ```html
 <div class="fk-card fk-card--clickable">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Clickable Card</h2>
+        <h2 class="fk-card__title">Klickbart kort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has hover effects and cursor pointer to indicate interactivity.</p>
+        <p>Det här kortet har svämningseffekter och pekmarkör för att indikera interaktivitet.</p>
     </div>
 </div>
 ```
 
-## Size Variants
+## Storleksvarianter
 
-Cards come in three sizes: small, default, and large.
+Kort finns i tre storlekar: liten, standard och stor.
 
 ```html
 <div class="fk-card fk-card--sm">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Small Card</h2>
+        <h2 class="fk-card__title">Litet kort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has reduced padding.</p>
+        <p>Det här kortet har reducerad utfyllnad.</p>
     </div>
 </div>
 
 <div class="fk-card">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Default Card</h2>
+        <h2 class="fk-card__title">Standardkort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has default padding.</p>
+        <p>Det här kortet har standardutfyllnad.</p>
     </div>
 </div>
 
 <div class="fk-card fk-card--lg">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Large Card</h2>
+        <h2 class="fk-card__title">Stort kort</h2>
     </div>
     <div class="fk-card__body">
-        <p>This card has increased padding.</p>
+        <p>Det här kortet har ökad utfyllnad.</p>
     </div>
 </div>
 ```
 
-## Content Examples
+## Innehållsexempel
 
-### Text Content
+### Textinnehåll
 
 ```html
 <div class="fk-card">
     <div class="fk-card__header">
-        <h2 class="fk-card__title">Article Preview</h2>
+        <h2 class="fk-card__title">Artikelförhandsgranskning</h2>
     </div>
     <div class="fk-card__body">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <ul>
-            <li>First list item</li>
-            <li>Second list item</li>
-            <li>Third list item</li>
+            <li>Första listobjektet</li>
+            <li>Andra listobjektet</li>
+            <li>Tredje listobjektet</li>
         </ul>
     </div>
 </div>
 ```
 
-### Profile Card
+### Profilkort
 
 ```html
 <div class="fk-card">
@@ -167,50 +167,50 @@ Cards come in three sizes: small, default, and large.
         <svg style="width: 80px; height: 80px; margin: 0 auto 1rem; background: #e0e4e4; border-radius: 50%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
-        <h2 class="fk-card__title">Jane Doe</h2>
-        <p class="fk-card__subtitle">Product Designer</p>
-        <p style="margin-top: 1rem; color: #6b7280;">Creating beautiful user experiences since 2018.</p>
+        <h2 class="fk-card__title">Anna Andersson</h2>
+        <p class="fk-card__subtitle">Produktdesigner</p>
+        <p style="margin-top: 1rem; color: #6b7280;">Skapar vackra användarupplevelser sedan 2018.</p>
     </div>
     <div class="fk-card__footer" style="justify-content: center;">
-        <button class="fk-button fk-button--primary">Follow</button>
-        <button class="fk-button fk-button--outline">Message</button>
+        <button class="fk-button fk-button--primary">Följ</button>
+        <button class="fk-button fk-button--outline">Meddela</button>
     </div>
 </div>
 ```
 
-## Component API
+## Komponent-API
 
-### CSS Classes
+### CSS-klasser
 
-| Class | Description |
+| Klass | Beskrivning |
 |-------|-------------|
-| `fk-card` | Base card class (required) |
-| `fk-card__header` | Card header container |
-| `fk-card__title` | Card title (typically `<h2>`) |
-| `fk-card__subtitle` | Card subtitle |
-| `fk-card__body` | Card body content |
-| `fk-card__footer` | Card footer for actions |
-| `fk-card__image` | Card image element |
-| `fk-card--elevated` | Enhanced shadow variant |
-| `fk-card--flat` | No border/shadow variant |
-| `fk-card--clickable` | Interactive variant with hover effects |
-| `fk-card--sm` | Small size |
-| `fk-card--lg` | Large size |
-| `fk-card--image-top` | Position image at top |
-| `fk-card--image-bottom` | Position image at bottom |
+| `fk-card` | Bas-klass för kort (obligatorisk) |
+| `fk-card__header` | Behållare för kortets sidhuvud |
+| `fk-card__title` | Kortets rubrik (vanligtvis `<h2>`) |
+| `fk-card__subtitle` | Kortets underrubrik |
+| `fk-card__body` | Kortets brödtext |
+| `fk-card__footer` | Kortets sidfot för åtgärder |
+| `fk-card__image` | Kortets bildelement |
+| `fk-card--elevated` | Variant med förstärkt skugga |
+| `fk-card--flat` | Variant utan kant/skugga |
+| `fk-card--clickable` | Interaktiv variant med svämningseffekter |
+| `fk-card--sm` | Liten storlek |
+| `fk-card--lg` | Stor storlek |
+| `fk-card--image-top` | Placera bild högst upp |
+| `fk-card--image-bottom` | Placera bild längst ner |
 
-### Accessibility
+### Tillgänglighet
 
-- Ensure proper heading hierarchy within cards
-- Use semantic HTML elements (`<h2>` for card titles, `<button>` for actions)
-- Provide meaningful alt text for card images
-- Maintain sufficient color contrast for text
-- For clickable cards, ensure keyboard users can activate the card (add `tabindex="0"` and keyboard handler)
+- Säkerställ rätt rubrikhierarki inom kort
+- Använd semantiska HTML-element (`<h2>` för kortrubriker, `<button>` för åtgärder)
+- Ange meningsfull alt-text för kortbilder
+- Upprätthåll tillräckligt färgkontrast för text
+- För klickbara kort, säkerställ att tangentbordsanvändare kan aktivera kortet (lägg till `tabindex="0"` och tangentbordshanterare)
 
-## Best Practices
+## Bästa praxis
 
-1. **Use cards to group related content** - Cards work well for organizing information into logical groups
-2. **Keep card content focused** - Each card should have a single, clear purpose
-3. **Use consistent sizing** - Maintain uniform card sizes within a grid layout
-4. **Provide clear actions** - Place primary actions in the card footer
-5. **Consider responsive layouts** - Cards can stack on mobile and form grids on larger screens
+1. **Använd kort för att gruppera relaterat innehåll** - Kort fungerar bra för att organisera information i logiska grupper
+2. **Håll kortinnehåll fokuserat** - Varje kort ska ha ett ensamt, tydligt syfte
+3. **Använd konsekvent storlek** - Upprätthåll enhetlig kortstorlek inom ett rutnätslayout
+4. **Ange tydliga åtgärder** - Placera primära åtgärder i kortets sidfot
+5. **Överväg responsiva layouter** - Kort kan staplas på mobil och bilda rutor på större skärmar

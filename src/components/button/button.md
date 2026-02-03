@@ -5,137 +5,137 @@ short-title: Button
 status: Produktionsklar
 ---
 
-The button component is used to trigger actions or navigate to other pages. It supports multiple variants, sizes, and states.
+Knappkomponenten används för att utlösa åtgärder eller navigera till andra sidor. Den stöder flera varianter, storlekar och tillstånd.
 
-## Basic Usage
+## Grundläggande användning
 
-### Primary Button
+### Primär knapp
 
-The primary button is used for the main action in a view.
+Den primära knappen används för huvudåtgärden i en vy.
 
 ```html
 <button class="fk-button fk-button--primary">
-    Save Changes
+    Spara ändringar
 </button>
 ```
 
-### Secondary Button
+### Sekundär knapp
 
-Use secondary buttons for alternative actions.
+Använd sekundära knappar för alternativa åtgärder.
 
 ```html
 <button class="fk-button fk-button--secondary">
-    Cancel
+    Avbryt
 </button>
 ```
 
-### Outline Button
+### Outline-knapp
 
-Outline buttons are used for less prominent actions.
+Outline-knappar används för mindre framträdande åtgärder.
 
 ```html
 <button class="fk-button fk-button--outline">
-    Learn More
+    Läs mer
 </button>
 ```
 
-### Danger Button
+### Fara-knapp
 
-Danger buttons are used for destructive actions.
+Fara-knappar används för destruktiva åtgärder.
 
 ```html
 <button class="fk-button fk-button--danger">
-    Delete
+    Ta bort
 </button>
 ```
 
-## Sizes
+## Storlekar
 
-Buttons come in three sizes: small (default), medium, and large.
+Knappar finns i tre storlekar: liten (standard), medium och stor.
 
 ```html
 <button class="fk-button fk-button--primary fk-button--sm">
-    Small Button
+    Liten knapp
 </button>
 
 <button class="fk-button fk-button--primary">
-    Default Button
+    Standardknapp
 </button>
 
 <button class="fk-button fk-button--primary fk-button--lg">
-    Large Button
+    Stor knapp
 </button>
 ```
 
-## States
+## Tillstånd
 
-### Disabled State
+### Inaktiverat tillstånd
 
 ```html
 <button class="fk-button fk-button--primary" disabled>
-    Disabled Primary
+    Inaktiverad primär
 </button>
 
 <button class="fk-button fk-button--secondary" disabled>
-    Disabled Secondary
+    Inaktiverad sekundär
 </button>
 ```
 
-## Block Button
+## Block-knapp
 
-For mobile-first layouts, use the block modifier for full-width buttons.
+För mobil-först-layouter, använd block-modifieraren för fullbreddsknappar.
 
 ```html
 <button class="fk-button fk-button--primary fk-button--block">
-    Full Width Button
+    Knapp i fullbredd
 </button>
 ```
 
-## With Icons
+## Med ikoner
 
-Buttons can include icons alongside text.
+Knappar kan inkludera ikoner bredvid text.
 
 ```html
 <button class="fk-button fk-button--primary">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
     </svg>
-    Continue
+    Fortsätt
 </button>
 
 <button class="fk-button fk-button--secondary">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
     </svg>
-    Go Back
+    Gå tillbaka
 </button>
 ```
 
-## Component API
+## Komponent-API
 
-### CSS Classes
+### CSS-klasser
 
-| Class | Description |
+| Klass | Beskrivning |
 |-------|-------------|
-| `fk-button` | Base button class (required) |
-| `fk-button--primary` | Primary variant (blue background) |
-| `fk-button--secondary` | Secondary variant (gray background) |
-| `fk-button--outline` | Outline variant (transparent with border) |
-| `fk-button--danger` | Danger variant (red background) |
-| `fk-button--sm` | Small size |
-| `fk-button--lg` | Large size |
-| `fk-button--block` | Full width (for mobile) |
+| `fk-button` | Bas-klass för knapp (obligatorisk) |
+| `fk-button--primary` | Primär variant (blå bakgrund) |
+| `fk-button--secondary` | Sekundär variant (grå bakgrund) |
+| `fk-button--outline` | Outline-variant (transparent med kant) |
+| `fk-button--danger` | Fara-variant (röd bakgrund) |
+| `fk-button--sm` | Liten storlek |
+| `fk-button--lg` | Stor storlek |
+| `fk-button--block` | Full bredd (för mobil) |
 
-### Accessibility
+### Tillgänglighet
 
-- Buttons automatically include focus-visible styles for keyboard navigation
-- Always provide meaningful text content for screen readers
-- Use `<button>` elements for actions and `<a>` elements styled as buttons for navigation
-- Disabled buttons have `disabled` attribute and reduced opacity
+- Knappar inkluderar automatiskt focus-visible-stilar för tangentbordsnavigering
+- Ange alltid meningsfullt textinnehåll för skärmläsare
+- Använd `<button>`-element för åtgärder och `<a>`-element formaterade som knappar för navigering
+- Inaktiverade knappar har attributet `disabled` och reducerad opacitet
 
-## Best Practices
+## Bästa praxis
 
-1. **Use primary buttons sparingly** - Only one primary button per view
-2. **Provide clear labels** - Button text should clearly indicate the action
-3. **Consider touch targets** - Minimum touch target size is 44x44px
-4. **Avoid generic labels** - Use specific labels like "Save Changes" instead of "OK"
+1. **Använd primära knappar sparsamt** - Endast en primär knapp per vy
+2. **Ange tydliga etiketter** - Knapptexten bör tydligt indikera åtgärden
+3. **Överväg tryckytor** - Minsta tryckyta är 44x44px
+4. **Undvik generiska etiketter** - Använd specifika etiketter som "Spara ändringar" istället för "OK"
