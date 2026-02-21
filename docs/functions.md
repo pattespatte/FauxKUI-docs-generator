@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Funktioner
 short-title: Funktioner
 status: Produktionsklar

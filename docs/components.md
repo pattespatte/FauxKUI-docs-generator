@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Komponenter
 short-title: Komponenter
 status: Produktionsklar

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: component
 title: Button
 short-title: Button
 status: Produktionsklar

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: component
 title: Card
 short-title: Card
 status: Produktionsklar

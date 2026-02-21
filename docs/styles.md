@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Visuellt
 short-title: Visuellt
 status: Produktionsklar
