@@ -21,4 +21,4 @@ npm install @forsakringskassan/docs-generator
 
 ## Nästa steg
 
-Läs mer om komponenter i [Komponenter](../components.html) sektionen.
+Läs mer om komponenter i [Komponenter](../src/components/) sektionen.

@@ -4,7 +4,7 @@
         "title": "Kom igång"
     },
     {
-        "path": "./components.html",
+        "path": "./src/components/",
         "title": "Komponenter"
     },
     {
