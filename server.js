@@ -9,6 +9,9 @@ const BUILD_DIR = path.join(__dirname, "docs", "build");
 
 const app = express();
 
+// Serve admin directory for CMS
+app.use("/admin", express.static(path.join(__dirname, "admin")));
+
 // Serve static assets (CSS, JS, images)
 app.use("/assets", express.static(path.join(BUILD_DIR, "assets")));
 app.use("/src", express.static(path.join(BUILD_DIR, "src")));
