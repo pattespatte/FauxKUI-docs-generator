@@ -6,11 +6,7 @@ backend:
   repo: pattespatte/FauxKUI-docs-generator
   branch: main
   auth_scope: repo
-  # You need to create a GitHub OAuth App and add the Client ID below
-  # https://github.com/settings/developers
-  # Homepage URL: https://pattespatte.github.io/FauxKUI-docs-generator/
-  # Authorization callback URL: https://pattespatte.github.io/FauxKUI-docs-generator/admin/
-  # client_id: YOUR_CLIENT_ID_HERE
+  client_id: Ov23li1lMwz33Z2ZUsyq
 
 media_folder: "public/images"
 public_folder: "/images"
