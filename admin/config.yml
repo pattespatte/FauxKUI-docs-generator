@@ -1,0 +1,55 @@
+# Decap CMS Configuration for FauxKUI Documentation
+# Production configuration using GitHub OAuth
+
+backend:
+  name: github
+  repo: pattespatte/FauxKUI-docs-generator
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  # Main documentation pages
+  - name: "docs"
+    label: "Documentation Pages"
+    label_singular: "Page"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}.md"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # Component documentation
+  - name: "components"
+    label: "Components"
+    label_singular: "Component"
+    folder: "src/components"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/{{slug}}.md"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Short Title", name: "short-title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # Component index
+  - name: "component-index"
+    label: "Component Index"
+    label_singular: "Component Index"
+    folder: "src/components"
+    create: false
+    slug: "index"
+    path: "index.md"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+editor:
+  preview: false
