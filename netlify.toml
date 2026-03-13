@@ -1,0 +1,29 @@
+# Netlify deployment configuration for FauxKUI Documentation
+
+[build]
+  publish = "docs/build"
+  command = "npm run docs:build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirect rules for the documentation site
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Handle admin route
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
