@@ -28,4 +28,3 @@ npm-debug.log*
 
 # Decap CMS - local development credentials
 .decap-server.yml
-admin/config.local.yml

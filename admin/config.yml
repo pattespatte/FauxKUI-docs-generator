@@ -1,8 +1,9 @@
 # Decap CMS Configuration for FauxKUI Documentation
-# Netlify deployment with Netlify Identity (Git Gateway)
+# Local development configuration with decap-server
 
 backend:
-  name: git-gateway
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
   branch: main
 
 media_folder: "public/images"
