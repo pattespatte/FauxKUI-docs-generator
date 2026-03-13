@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: pattespatte/FauxKUI-docs-generator
+  repository: pattespatte/FauxKUI-docs-generator
   branch: main
   auth_scope: repo
   client_id: Ov23li1lMwz33Z2ZUsyq
