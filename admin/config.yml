@@ -32,7 +32,7 @@ collections:
     folder: "src/components"
     create: true
     slug: "{{slug}}"
-    path: "{{slug}}/{{slug}}.md"
+    path: "{{slug}}/{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
       - {label: "Title", name: "title", widget: "string"}
