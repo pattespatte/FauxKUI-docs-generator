@@ -3,10 +3,13 @@
 
 backend:
   name: github
-  repository: pattespatte/FauxKUI-docs-generator
+  repo: pattespatte/FauxKUI-docs-generator
   branch: main
   auth_scope: repo
   client_id: Ov23li1lMwz33Z2ZUsyq
+
+# Prevent Netlify Identity fallback on GitHub Pages
+netlify_identity_enabled: false
 
 media_folder: "public/images"
 public_folder: "/images"
