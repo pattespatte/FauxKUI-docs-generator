@@ -5,6 +5,7 @@ backend:
   name: github
   repo: pattespatte/FauxKUI-docs-generator
   branch: main
+  client_id: Ov23li8yNmDm6xmPEPXe
 
 media_folder: "public/images"
 public_folder: "/images"
