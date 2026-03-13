@@ -25,6 +25,3 @@ npm-debug.log*
 
 # Playwright MCP
 .playwright-mcp/
-
-# Decap CMS - local development credentials
-.decap-server.yml

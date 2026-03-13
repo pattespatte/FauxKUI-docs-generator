@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:build": "tsx generate-docs.ts",
-    "docs:serve": "npm run docs:build && node server.js",
-    "cms": "npx decap-server"
+    "docs:serve": "npm run docs:build && node server.js"
   },
   "keywords": [
     "design-system",
@@ -18,7 +17,6 @@
   "devDependencies": {
     "@forsakringskassan/docs-generator": "2.35.5",
     "@types/node": "^24.10.9",
-    "decap-server": "^3.5.2",
     "esbuild": "0.27.2",
     "express": "^5.2.1",
     "sass": "1.97.3",
