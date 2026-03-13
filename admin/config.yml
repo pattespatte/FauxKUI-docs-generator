@@ -1,10 +1,16 @@
 # Sveltia CMS Configuration for FauxKUI Documentation
-# Local development configuration with decap-server
+# GitHub backend for remote editing on GitHub Pages
 
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: github
+  repo: pattespatte/FauxKUI-docs-generator
   branch: main
+  auth_scope: repo
+  # You need to create a GitHub OAuth App and add the Client ID below
+  # https://github.com/settings/developers
+  # Homepage URL: https://pattespatte.github.io/FauxKUI-docs-generator/
+  # Authorization callback URL: https://pattespatte.github.io/FauxKUI-docs-generator/admin/
+  # client_id: YOUR_CLIENT_ID_HERE
 
 media_folder: "public/images"
 public_folder: "/images"
