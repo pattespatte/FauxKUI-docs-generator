@@ -1,10 +1,11 @@
-# Decap CMS Configuration for FauxKUI Documentation
+# Static CMS Configuration for FauxKUI Documentation
 # Production configuration using GitHub OAuth
 
 backend:
   name: github
   repo: pattespatte/FauxKUI-docs-generator
   branch: main
+  auth_scope: repo
   client_id: Ov23li8yNmDm6xmPEPXe
 
 media_folder: "public/images"
