@@ -2,22 +2,30 @@
 
 [build]
   publish = "docs/build"
-  command = "npm run docs:build"
+  command = "npm run docs:build && cp -r admin docs/build/"
 
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirect rules for the documentation site
+# Admin route - must come first (exclude from SPA redirect)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/admin/index.html"
+  to = "/admin/index.html"
   status = 200
+  force = false
 
-# Handle admin route
+# SPA redirect for documentation (exclude /admin/)
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# All other routes go to SPA index
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
 
 # Headers for security
 [[headers]]
