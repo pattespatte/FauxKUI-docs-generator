@@ -1,6 +1,6 @@
 ---
 layout: component
-title: test page
+title: Test Section
 short-title: just a test
 status: Produktionsklar
 ---
