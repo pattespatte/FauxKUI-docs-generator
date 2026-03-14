@@ -57,7 +57,7 @@ A **design system** is like using pre-made parts for websites. It includes:
 
 ## Part 2: The FauxKUI Components
 
-FauxKUI currently has two main components:
+FauxKUI currently includes these components:
 
 ### 1. Button Component
 
@@ -116,6 +116,65 @@ A card is like a container - it groups related content together.
     </div>
 </div>
 ```
+
+---
+
+## Part 2.5: Content Management with Sveltia CMS
+
+FauxKUI includes **Sveltia CMS** - a web-based content management system that lets you edit documentation and components directly from your browser!
+
+### What is Sveltia CMS?
+
+Sveltia CMS is a modern CMS that:
+- Provides a **web interface** for editing Markdown files
+- Uses **GitHub** as the backend (changes are commits to your repo)
+- Works great with **GitHub Pages** for hosting
+- Lets non-technical users edit content without touching code
+
+### How It Works
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     YOU EDIT                                    │
+│  Open /admin in your browser → Edit content in friendly UI      │
+└────────────────────┬────────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              Sveltia CMS commits changes to GitHub              │
+│   (creates commits with your Markdown edits)                    │
+└────────────────────┬────────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              docs-generator rebuilds the site                   │
+│         (regenerates HTML from updated Markdown)               │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Accessing the CMS
+
+1. Start the dev server: `npm run docs:serve`
+2. Navigate to `http://localhost:8080/admin/`
+3. Sign in with your GitHub account
+4. Edit pages and components from the web interface
+
+### CMS Configuration
+
+The CMS is configured in `admin/config.yml`:
+
+```yaml
+backend:
+  name: github
+  repo: your-username/FauxKUI-docs-generator  # Your GitHub repo
+  branch: main
+  client_id: your-github-oauth-client-id      # For GitHub OAuth
+```
+
+**Collections** defined in the config determine what you can edit:
+- **Documentation Pages**: Files in `docs/` folder
+- **Components**: Component files in `src/components/`
+- **Component Index**: The main components overview page
 
 ---
 
@@ -236,14 +295,19 @@ FauxKUI/
 ├── package.json            # Project info and dependencies
 ├── tsconfig.json           # TypeScript configuration
 │
+├── admin/                  # Sveltia CMS configuration
+│   └── config.yml          # CMS settings (collections, backend)
+│
 ├── src/                    # Source files (your components)
 │   └── components/
 │       ├── button/
 │       │   ├── button.md   # Documentation
 │       │   └── button.scss # Styles
-│       └── card/
-│           ├── card.md     # Documentation
-│           └── card.scss   # Styles
+│       ├── card/
+│       │   ├── card.md     # Documentation
+│       │   └── card.scss   # Styles
+│       └── test-page/      # Example component via CMS
+│           └── test-page.md
 │
 ├── docs/                   # Documentation files
 │   ├── src/
@@ -251,6 +315,7 @@ FauxKUI/
 │   │   ├── fkui-theme.scss # FKUI theme for code previews
 │   │   ├── style.scss      # Main SCSS entry point
 │   │   └── setup.ts        # Vue 3 setup for live examples
+│   ├── index.md            # Home page
 │   ├── gettingstarted.md   # Getting started page
 │   ├── components.md       # Components overview
 │   ├── guides.md           # Guides page
@@ -261,7 +326,8 @@ FauxKUI/
 │       ├── gettingstarted.html
 │       └── src/components/
 │           ├── button/index.html
-│           └── card/index.html
+│           ├── card/index.html
+│           └── test-page/index.html
 │
 └── templates/              # HTML templates for pages
     ├── default.template.html
@@ -284,6 +350,8 @@ The documentation site includes several main pages in the `docs/` folder:
 | Styles | `styles.md` | Visual design guidelines |
 
 Each page uses front matter for metadata (title, layout, status) and contains regular Markdown content.
+
+> **Tip**: You can edit these pages directly through the Sveltia CMS web interface at `/admin/` without touching the files!
 
 ---
 
@@ -398,6 +466,14 @@ Automatically refreshing the browser when you save a file - super handy for deve
 |---------|--------------|
 | `npm run docs:build` | Generate the documentation website |
 | `npm run docs:serve` | Build and start a live preview server |
+
+### Accessing the CMS
+
+| URL | What it is |
+|-----|-----------|
+| `http://localhost:8080/admin/` | Sveltia CMS web interface for editing content |
+
+---
 
 ---
 
