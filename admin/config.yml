@@ -24,8 +24,10 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Short Title", name: "short-title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   # Component pages - individual collections for nested folders
@@ -70,6 +72,21 @@ collections:
       - {label: "Short Title", name: "short-title", widget: "string"}
       - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  # Component index page
+  - name: "components-index"
+    label: "Komponenter"
+    label_singular: "Sida"
+    files:
+      - file: "src/components/index.md"
+        name: "index"
+        label: "Komponenter"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Short Title", name: "short-title", widget: "string"}
+          - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
 editor:
   preview: false
