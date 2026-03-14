@@ -15,45 +15,32 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  # Main documentation pages
+  # Documentation pages
   - name: "docs"
-    label: "Documentation Pages"
+    label: "Documentation"
     label_singular: "Page"
     folder: "docs"
     create: true
     slug: "{{slug}}"
-    path: "{{slug}}.md"
+    extension: "md"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  # Component documentation
+  # Component pages
   - name: "components"
-    label: "Components"
+    label: "Komponenter"
     label_singular: "Component"
     folder: "src/components"
     create: true
     slug: "{{slug}}"
-    path: "{{slug}}/{{slug}}"
+    extension: "md"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Title", name: "short-title", widget: "string"}
       - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-  # Component index
-  - name: "component-index"
-    label: "Component Index"
-    label_singular: "Component Index"
-    folder: "src/components"
-    create: false
-    slug: "index"
-    path: "index.md"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-      - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
 editor:
