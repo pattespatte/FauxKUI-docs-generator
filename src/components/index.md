@@ -9,12 +9,19 @@ Här hittar du alla tillgängliga komponenter i FauxKUI.
 
 ## Tillgängliga komponenter
 
-### Button
-En flexibel knappkomponent med flera varianter.
-[Se Button →](button/)
+### Knapp
 
-### Card
+En flexibel knappkomponent med flera varianter.
+[Se Knapp →](knapp/)
+
+### Kort
+
 En behållarkomponent för gruppering av innehåll.
-[Se Card →](card/)
+[Se Kort →](kort/)
+
+### Modal
+
+Modalkomponenten för dialogrutor och meddelanden.
+[Se Modal →](modal/)
 
 Läs mer om specifika komponenter genom att navigera till dem i menyn.
