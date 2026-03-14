@@ -1,0 +1,151 @@
+/**
+ * FauxKUI Modal Component
+ * En dialogkomponent för att visa meddelanden och samla in användarinput.
+ */
+
+.fk-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    // Overlay (backdrop)
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation: fk-modal-fade-in 150ms ease-out;
+    }
+
+    // Dialog container
+    &__dialog {
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        max-width: 500px;
+        width: 100%;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        animation: fk-modal-slide-up 200ms ease-out;
+    }
+
+    // Header
+    &__header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e0e4e4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        flex: 1;
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        color: #6b7280;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: #f0f2f2;
+            color: #1a1a1a;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #00585d;
+            outline-offset: 2px;
+        }
+
+        svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+
+    // Body
+    &__body {
+        padding: 1.5rem;
+        overflow-y: auto;
+        flex: 1;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    // Footer
+    &__footer {
+        padding: 1rem 1.5rem;
+        background-color: #f9fafb;
+        border-top: 1px solid #e0e4e4;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    // Size variants
+    &--sm &__dialog {
+        max-width: 400px;
+    }
+
+    &--lg &__dialog {
+        max-width: 600px;
+    }
+
+    &--full &__dialog {
+        max-width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+// Animations
+@keyframes fk-modal-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fk-modal-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

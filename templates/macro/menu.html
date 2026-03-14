@@ -1,0 +1,54 @@
+{% macro sidenav_item(doc, node) %}
+<ol>
+    {%- for item in node.children -%}
+
+    {# section node #}
+    {%- if item.children and item.children.length > 1 -%}
+    <li class="expandable {% if item.active %}active{% endif %}">
+        <details {% if item.active %}open{% endif %}>
+            <summary>{{ item.title }}</summary>
+            {% if item.children.length > 0 %}
+            {{ sidenav_item(doc, item) }}
+            {% endif %}
+        </details>
+    </li>
+    {%- endif -%}
+
+    {# single-child section or leaf node #}
+    {%- if not item.children or (item.children and item.children.length == 1) -%}
+    <li class="link {% if item.active %}active{% endif %}">
+        <a
+            href="{% if item.children and item.children.length == 1 %}{{ item.children[0].path | relative(doc) }}{% else %}{{ item.path | relative(doc) }}{% endif %}"
+            {% if item.external or (item.children and item.children.length == 1 and item.children[0].external) %}
+            target="_blank"
+            rel="external"
+            {% endif %}
+            {% if item.children and item.children.length == 1 %}
+                {% if item.children[0].path.startsWith('/') %}
+            data-path="{{ item.children[0].path.slice(1) }}"
+                {% endif %}
+                {% if item.children[0].path.startsWith('./') %}
+            data-path="{{ item.children[0].path.slice(2) }}"
+                {% endif %}
+            {% else %}
+            {% if item.path.startsWith('/') %}
+            data-path="{{ item.path.slice(1) }}"
+            {% endif %}
+            {% if item.path.startsWith('./') %}
+            data-path="{{ item.path.slice(2) }}"
+            {% endif %}
+            {% endif %}
+        >
+            {{ item.title }}
+        </a>
+    </li>
+    {%- endif -%}
+
+    {%- endfor -%}
+</ol>
+{% endmacro %}
+
+{% macro sidenav(doc, node, label) %}
+<input type="checkbox" class="sidenav__toggle" aria-label="Open/close navigation" />
+<nav class="navigation" aria-label="{{ label }}">{{ sidenav_item(doc, node) }}</nav>
+{% endmacro %}

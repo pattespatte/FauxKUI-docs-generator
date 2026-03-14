@@ -1,0 +1,30 @@
+/**
+ * FauxKUI Felmodal Component
+ * En modal för att visa felmeddelanden till användaren.
+ */
+
+// Error modal variant
+.fk-modal--error,
+.fk-error-modal {
+    // Inherits from base modal
+
+    & .fk-modal__dialog {
+        border-left: 4px solid #d9453f;
+    }
+
+    & .fk-modal__title {
+        color: #991b1b;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d9453f" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/**
+ * FauxKUI Varningsmodal Component
+ * En modal för att varna användaren om potentiella risker.
+ */
+
+// Warning modal variant
+.fk-modal--warning,
+.fk-warning-modal {
+    // Inherits from base modal
+
+    & .fk-modal__dialog {
+        border-left: 4px solid #d97706;
+    }
+
+    & .fk-modal__title {
+        color: #92400e;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d97706" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

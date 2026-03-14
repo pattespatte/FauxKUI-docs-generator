@@ -15,8 +15,8 @@ const docs = new Generator(import.meta.url, {
     outputFolder: "docs/build",
     cacheFolder: ".cache/docs",
     exampleFolders: ["./src/components"],
-    // Don't use custom templates - use built-in FK templates from docs-generator
-    // templateFolders: ["./templates"],
+    // Use custom templates for navigation fixes
+    templateFolders: ["./templates"],
     processors: [
         searchProcessor(),
         topnavProcessor("docs/topmenu.json", "FauxKUI Design System"),
