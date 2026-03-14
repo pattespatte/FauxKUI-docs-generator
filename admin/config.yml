@@ -28,11 +28,39 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  # Component pages
-  - name: "components"
-    label: "Komponenter"
-    label_singular: "Component"
-    folder: "src/components"
+  # Component pages - individual collections for nested folders
+  - name: "components-knapp"
+    label: "Knapp"
+    label_singular: "Komponent"
+    folder: "src/components/knapp"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Short Title", name: "short-title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "components-kort"
+    label: "Kort"
+    label_singular: "Komponent"
+    folder: "src/components/kort"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "component"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Short Title", name: "short-title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Produktionsklar", "Beta", "Deprecated"], default: "Produktionsklar"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "components-modal"
+    label: "Modal"
+    label_singular: "Komponent"
+    folder: "src/components/modal"
     create: true
     slug: "{{slug}}"
     extension: "md"
